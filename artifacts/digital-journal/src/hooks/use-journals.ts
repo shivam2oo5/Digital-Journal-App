@@ -1,14 +1,14 @@
 import { useState, useCallback } from 'react';
-import { Journal } from '@/lib/storage';
+import { Journal, getJournals } from '@/lib/storage';
 import * as store from '@/lib/journal-store';
 
 export function useJournals() {
   const [journals, setJournals] = useState<Journal[]>(() => store.getActiveJournals());
-  const [allJournals, setAllJournals] = useState<Journal[]>(() => store.getJournals());
+  const [allJournals, setAllJournals] = useState<Journal[]>(() => getJournals());
 
   const refresh = useCallback(() => {
     setJournals(store.getActiveJournals());
-    setAllJournals(store.getJournals());
+    setAllJournals(getJournals());
   }, []);
 
   return {
