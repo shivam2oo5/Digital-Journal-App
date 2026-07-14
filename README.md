@@ -1,4 +1,4 @@
-INTERN ID: CITS6162
+INTERN ID: CITS6183
 # Digital Journal Application
 
 A comprehensive full-stack digital journaling platform built with modern web technologies. This application allows users to create, manage, and analyze their journal entries with rich features and analytics.
